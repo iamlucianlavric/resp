@@ -1,0 +1,24 @@
+#include <cs50.h>
+#include <stdio.h>
+
+void pyramid(int h){
+    for(int o=0;  o < h; o++){
+        for(int j = 0; j<h; j++){
+            if(j>=h-o-1){
+                printf("#");
+            } else {
+                printf(" ");
+             }
+        }
+        printf("\n");
+    }
+}
+
+int main(void)
+{
+    int i = get_int("Positive integer: ");
+    while (i<0||i>8){
+        i = get_int("Positive integer: ");
+    }
+    pyramid(i); 
+}
